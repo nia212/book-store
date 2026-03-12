@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Loading from '../../components/loading';
 import getBaseUrl from '../../utils/baseURL';
 import { MdIncompleteCircle } from 'react-icons/md'
-import RevenueChart from './RevenueChart';
+import RevenueChart from './revenueChart';
 
 const Dashboard = () => {
     const [loading, setLoading] = useState(true);
