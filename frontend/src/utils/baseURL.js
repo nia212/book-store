@@ -1,5 +1,5 @@
 const getBaseUrl = () => {
-    return "https://book-store-production-0261.up.railway.app";
+    return "https://book-store-production-facb.up.railway.app/";
 }
 
 export default getBaseUrl;
