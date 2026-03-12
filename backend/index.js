@@ -25,16 +25,20 @@ app.use("/api/auth", userRoutes);
 app.use("/api/admin", adminRoute);
 
 
-
 async function main() {
   await mongoose.connect(process.env.DB_URL);
-  app.use("/", (req, res) => {
+
+  app.get("/", (req, res) => {
     res.send("Book Store Server is running!");
+  });
+
+  const PORT = process.env.PORT || 5000;
+
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
   });
 }
 
-main().then(() => console.log("Mongodb connect successfully!")).catch(err => console.log(err));
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+main()
+  .then(() => console.log("MongoDB connected successfully"))
+  .catch(err => console.error(err));
