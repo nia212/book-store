@@ -39,6 +39,6 @@ async function main() {
   });
 }
 
-main()
+main() 
   .then(() => console.log("MongoDB connected successfully"))
   .catch(err => console.error(err));
